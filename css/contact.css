@@ -1,0 +1,48 @@
+.contact { background: linear-gradient(180deg, transparent, rgba(15,15,34,0.3)); }
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.contact-info h3 {
+  font-family: var(--font-heading); font-size: 1.3rem; font-weight: 600;
+  color: var(--gold); margin-bottom: 20px; letter-spacing: 0.05em;
+}
+.contact-info p { font-size: 1.05rem; color: var(--ivory-dim); line-height: 2; margin-bottom: 32px; }
+.socials { display: flex; gap: 14px; }
+.soc-link {
+  width: 44px; height: 44px; border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  color: var(--gold); transition: all 0.4s var(--ease-out-expo);
+}
+.soc-link:hover { background: rgba(201,168,76,0.08); border-color: var(--gold); transform: translateY(-4px); }
+.contact-form { display: flex; flex-direction: column; gap: 24px; }
+.field { position: relative; }
+.field label {
+  display: block; font-family: var(--font-heading); font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-dark);
+  margin-bottom: 10px; transition: color 0.3s;
+}
+.field:focus-within label { color: var(--gold); }
+.field input, .field textarea {
+  width: 100%; padding: 16px 0; background: transparent;
+  border: none; border-bottom: 1px solid rgba(201,168,76,0.12);
+  color: var(--ivory); font-family: var(--font-body); font-size: 1.05rem;
+  font-weight: 400; outline: none; transition: border-color 0.4s;
+}
+.field input:focus, .field textarea:focus { border-color: var(--gold); }
+.field input::placeholder, .field textarea::placeholder { color: rgba(168,158,138,0.3); }
+.field textarea { resize: vertical; min-height: 120px; }
+.btn-mag {
+  display: inline-flex; align-items: center; gap: 12px; padding: 18px 44px;
+  background: transparent; border: 1px solid var(--gold); color: var(--gold);
+  font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  transition: all 0.4s var(--ease-out-expo); align-self: flex-start;
+  position: relative; overflow: hidden;
+}
+.btn-mag::before {
+  content: ''; position: absolute; inset: 0; background: var(--gold);
+  transform: translateY(101%); transition: transform 0.4s var(--ease-out-expo);
+}
+.btn-mag:hover::before { transform: translateY(0); }
+.btn-mag span { position: relative; z-index: 1; }
+.btn-mag:hover { color: var(--bg-deepest); }
+.btn-mag .arrow { position: relative; z-index: 1; transition: transform 0.3s; }
+.btn-mag:hover .arrow { transform: translateX(5px); }

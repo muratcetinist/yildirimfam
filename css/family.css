@@ -1,0 +1,7 @@
+.family { background: linear-gradient(180deg, transparent, rgba(6,6,16,0.5), transparent); }
+.family-empty {
+  text-align: center; color: var(--ivory-muted);
+  font-family: var(--font-accent); font-style: italic;
+  font-size: 1.1rem; letter-spacing: 0.1em;
+  padding: 60px 0; border: 1px dashed rgba(201,168,76,0.1);
+}

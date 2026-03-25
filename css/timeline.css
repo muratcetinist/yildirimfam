@@ -1,0 +1,15 @@
+.timeline-section { overflow: hidden; }
+.timeline-track { display: flex; gap: 0; width: max-content; padding: 60px 0; }
+.timeline-card {
+  width: 420px; flex-shrink: 0; padding: 0 32px;
+  border-left: 1px solid rgba(201,168,76,0.1); position: relative;
+}
+.timeline-card::before {
+  content: ''; position: absolute; top: -8px; left: -5px;
+  width: 8px; height: 8px; background: var(--gold); transform: rotate(45deg);
+}
+.timeline-card .tl-year {
+  font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700;
+  color: var(--gold); letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 12px;
+}
+.timeline-card .tl-text { font-size: 1rem; color: var(--ivory-dim); line-height: 1.9; }

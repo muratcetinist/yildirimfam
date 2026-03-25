@@ -1,0 +1,58 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--bg-deepest);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.preloader.done { opacity: 0; visibility: hidden; pointer-events: none; }
+.preloader { animation: preloader-failsafe 0.8s ease 4s forwards; }
+.preloader.done { animation: none; }
+@keyframes preloader-failsafe { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+.preloader-shield { width: 80px; height: 100px; margin-bottom: 30px; }
+.preloader-shield path {
+  fill: none; stroke: var(--gold); stroke-width: 2;
+  stroke-dasharray: 300; stroke-dashoffset: 300;
+  animation: drawShield 1.6s ease forwards;
+}
+.preloader-shield .shield-sun {
+  stroke-dasharray: 80; stroke-dashoffset: 80;
+  animation: drawShield 1s ease 0.8s forwards;
+}
+@keyframes drawShield { to { stroke-dashoffset: 0; } }
+.preloader-text {
+  font-family: var(--font-display);
+  font-size: 1.6rem; color: var(--gold);
+  letter-spacing: 12px; overflow: hidden;
+}
+.preloader-text span {
+  display: inline-block; opacity: 0;
+  transform: translateY(100%);
+  animation: preloaderChar 0.5s var(--ease-out-expo) forwards;
+}
+.preloader-bar {
+  width: 120px; height: 1px;
+  background: rgba(201,168,76,0.15);
+  margin-top: 24px; position: relative; overflow: hidden;
+}
+.preloader-bar::after {
+  content: ''; position: absolute;
+  left: 0; top: 0; bottom: 0; width: 0;
+  background: var(--gold);
+  animation: preloaderBar 2s ease forwards;
+}
+@keyframes preloaderBar { to { width: 100%; } }
+@keyframes preloaderChar { to { opacity: 1; transform: translateY(0); } }
+
+.grain {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 100; opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px;
+}
+
+#particleCanvas { position: fixed; inset: 0; pointer-events: none; z-index: 1; }
