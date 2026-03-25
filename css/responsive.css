@@ -20,7 +20,7 @@
   .about-visual { order: -1; }
   .about-text p:first-of-type::first-letter { font-size: 3rem; }
   .origin-row { grid-template-columns: 1fr; }
-  .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+  .contact-center { padding: 0 16px; }
   .gallery-item.gi-tall { width: 220px; height: 330px; }
   .gallery-item.gi-wide { width: 360px; height: 240px; }
   .gallery-item.gi-sq { width: 260px; height: 260px; }

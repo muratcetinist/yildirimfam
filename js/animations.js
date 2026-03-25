@@ -23,11 +23,8 @@ if (window.hasGSAP) {
 
     // carousels are handled in carousel.js
 
-    gsap.utils.toArray('.contact-info h3, .contact-info p, .socials').forEach(function(el, i) {
-      gsap.from(el, { x: -30, opacity: 0, duration: 0.8, delay: i * 0.1, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 85%' } });
-    });
-    gsap.utils.toArray('.field, .btn-mag').forEach(function(el, i) {
-      gsap.from(el, { y: 30, opacity: 0, duration: 0.8, delay: i * 0.08, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%' } });
+    gsap.utils.toArray('.contact-center h3, .contact-center p, .socials').forEach(function(el, i) {
+      gsap.from(el, { y: 30, opacity: 0, duration: 0.8, delay: i * 0.1, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 85%' } });
     });
 
     gsap.utils.toArray('.family-member').forEach(function(el, i) {
