@@ -21,7 +21,7 @@ if (window.hasGSAP) {
       card.addEventListener('mouseleave', function() { gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.6, ease: 'power2.out' }); });
     });
 
-    // horizontal scroll — timeline
+    // horizontal scroll: timeline
     (function() {
       var track = document.getElementById('timelineTrack');
       var section = document.querySelector('.timeline-section');
@@ -33,7 +33,7 @@ if (window.hasGSAP) {
       }
     })();
 
-    // horizontal scroll — gallery
+    // horizontal scroll: gallery
     (function() {
       var track = document.getElementById('galleryTrack');
       var section = document.querySelector('.gallery-section');
@@ -52,6 +52,8 @@ if (window.hasGSAP) {
       gsap.from(el, { y: 30, opacity: 0, duration: 0.8, delay: i * 0.08, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%' } });
     });
 
-    gsap.from('.family-empty', { y: 20, opacity: 0, duration: 0.8, ease: 'expo.out', scrollTrigger: { trigger: '.family-empty', start: 'top 85%' } });
+    gsap.utils.toArray('.family-member').forEach(function(el, i) {
+      gsap.from(el, { y: 40, opacity: 0, duration: 1, delay: i * 0.15, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 88%' } });
+    });
   } catch(e) { console.warn('Animations error:', e); }
 }

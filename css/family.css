@@ -1,7 +1,119 @@
 .family { background: linear-gradient(180deg, transparent, rgba(6,6,16,0.5), transparent); }
-.family-empty {
-  text-align: center; color: var(--ivory-muted);
-  font-family: var(--font-accent); font-style: italic;
-  font-size: 1.1rem; letter-spacing: 0.1em;
-  padding: 60px 0; border: 1px dashed rgba(201,168,76,0.1);
+
+/* Grid */
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card */
+.family-member {
+  background: linear-gradient(135deg, rgba(201,168,76,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: center;
+  transition: border-color 0.4s, box-shadow 0.4s, transform 0.4s;
+}
+.family-member:hover {
+  border-color: rgba(201,168,76,0.3);
+  box-shadow: 0 8px 40px rgba(201,168,76,0.08);
+  transform: translateY(-4px);
+}
+
+/* Highlight variant (Anıl) */
+.family-member--highlight {
+  border-color: rgba(201,168,76,0.25);
+  background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(255,255,255,0.03));
+  box-shadow: 0 0 30px rgba(201,168,76,0.06);
+}
+.family-member--highlight:hover {
+  border-color: rgba(201,168,76,0.45);
+  box-shadow: 0 8px 50px rgba(201,168,76,0.14);
+}
+
+/* Portrait placeholder */
+.member-portrait {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 28px;
+  position: relative;
+}
+.portrait-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(201,168,76,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(201,168,76,0.05), rgba(6,6,16,0.8));
+  color: rgba(201,168,76,0.3);
+  overflow: hidden;
+}
+.portrait-placeholder svg {
+  width: 70%;
+  height: 70%;
+}
+
+/* When real portrait images are added */
+.member-portrait img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(201,168,76,0.2);
+}
+
+/* Name */
+.member-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+/* Role */
+.member-role {
+  display: block;
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--ivory-muted);
+  letter-spacing: 0.12em;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+/* Bio */
+.member-bio {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--ivory);
+  opacity: 0.85;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.member-bio:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive: handled in responsive.css but fallback here */
+@media (max-width: 768px) {
+  .family-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .family-member {
+    padding: 32px 24px;
+  }
+  .member-portrait {
+    width: 130px;
+    height: 130px;
+  }
 }
