@@ -133,26 +133,32 @@
     <span class="sec-label" data-i18n="tl_label">Through the Ages</span>
     <h2 class="sec-title" data-i18n="tl_title">Our Journey</h2>
   </div>
-  <div class="timeline-track" id="timelineTrack">
-    <div class="timeline-card">
-      <div class="tl-year" data-i18n="tl1_year">Ancestral Roots: Ardahan</div>
-      <p class="tl-text" data-i18n="tl1_text">The earliest known Yıldırım forebears settle in the highlands of Ardahan province, establishing a household bound by the values of the northeastern frontier: resilience, hospitality and unwavering family loyalty.</p>
+  <div class="timeline-wrapper">
+    <div class="timeline-track" id="timelineTrack">
+      <div class="timeline-card">
+        <div class="tl-year" data-i18n="tl1_year">Ancestral Roots: Ardahan</div>
+        <p class="tl-text" data-i18n="tl1_text">The earliest known Yıldırım forebears settle in the highlands of Ardahan province, establishing a household bound by the values of the northeastern frontier: resilience, hospitality and unwavering family loyalty.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="tl-year" data-i18n="tl2_year">The Trabzon Connection</div>
+        <p class="tl-text" data-i18n="tl2_text">The family extends its reach to Trabzon, the great Black Sea port. Trade, education and cultural exchange along the coast open new chapters in the Yıldırım story, while the bond to Ardahan remains unbroken.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="tl-year" data-i18n="tl3_year">The Coat of Arms</div>
+        <p class="tl-text" data-i18n="tl3_text">The family crest is formalized. The radiant sun of Ardahan's open skies, the peacock crown of ancestral dignity and the snowflower of northeastern resilience become lasting symbols of Yıldırım identity.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="tl-year" data-i18n="tl4_year">Migration &amp; Growth</div>
+        <p class="tl-text" data-i18n="tl4_text">Branches of the family spread across Turkey and beyond, carrying the spirit of Ardahan and the ambition kindled in Trabzon to new lands. Wherever they go, the Yıldırım name commands respect.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="tl-year" data-i18n="tl5_year">The Modern Era</div>
+        <p class="tl-text" data-i18n="tl5_text">Today, the Yıldırım family thrives across the globe, a living testament to the enduring strength of Anatolian kinship, shared memory and a name carried with pride from the highlands of Ardahan to every corner of the world.</p>
+      </div>
     </div>
-    <div class="timeline-card">
-      <div class="tl-year" data-i18n="tl2_year">The Trabzon Connection</div>
-      <p class="tl-text" data-i18n="tl2_text">The family extends its reach to Trabzon, the great Black Sea port. Trade, education and cultural exchange along the coast open new chapters in the Yıldırım story, while the bond to Ardahan remains unbroken.</p>
-    </div>
-    <div class="timeline-card">
-      <div class="tl-year" data-i18n="tl3_year">The Coat of Arms</div>
-      <p class="tl-text" data-i18n="tl3_text">The family crest is formalized. The radiant sun of Ardahan's open skies, the peacock crown of ancestral dignity and the snowflower of northeastern resilience become lasting symbols of Yıldırım identity.</p>
-    </div>
-    <div class="timeline-card">
-      <div class="tl-year" data-i18n="tl4_year">Migration &amp; Growth</div>
-      <p class="tl-text" data-i18n="tl4_text">Branches of the family spread across Turkey and beyond, carrying the spirit of Ardahan and the ambition kindled in Trabzon to new lands. Wherever they go, the Yıldırım name commands respect.</p>
-    </div>
-    <div class="timeline-card">
-      <div class="tl-year" data-i18n="tl5_year">The Modern Era</div>
-      <p class="tl-text" data-i18n="tl5_text">Today, the Yıldırım family thrives across the globe, a living testament to the enduring strength of Anatolian kinship, shared memory and a name carried with pride from the highlands of Ardahan to every corner of the world.</p>
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="tlPrev" aria-label="Previous">&lsaquo;</button>
+      <button class="carousel-btn" id="tlNext" aria-label="Next">&rsaquo;</button>
     </div>
   </div>
 </section>
@@ -224,7 +230,7 @@
   </div>
 </section>
 
-<!-- GALLERY: HORIZONTAL SCROLL -->
+<!-- GALLERY: CAROUSEL -->
 <div class="divider"><div class="divider-gem"></div></div>
 <section class="gallery-section section-pad" id="gallerySection">
   <div class="container" style="margin-bottom:40px;">
@@ -232,8 +238,9 @@
     <h2 class="sec-title" data-i18n="gal_title">Family Gallery</h2>
     <p class="sec-sub" data-i18n="gal_subtitle">Moments captured through the years: celebrations, gatherings and the quiet joys of family life.</p>
   </div>
-  <div class="gallery-track" id="galleryTrack">
-    <div class="gallery-item gi-tall" data-index="0">
+  <div class="gallery-wrapper">
+    <div class="gallery-track" id="galleryTrack">
+      <div class="gallery-item gi-tall" data-index="0">
       <div class="gallery-bg g1" data-i18n="gal_ph1">Family Portrait</div>
       <div class="gallery-caption"><span data-i18n="gal_ov1">Family Portrait, Ardahan</span></div>
     </div>
@@ -264,6 +271,11 @@
     <div class="gallery-item gi-wide" data-index="7">
       <div class="gallery-bg g8" data-i18n="gal_ph8">Generations</div>
       <div class="gallery-caption"><span data-i18n="gal_ov8">Three Generations</span></div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="galPrev" aria-label="Previous">&lsaquo;</button>
+      <button class="carousel-btn" id="galNext" aria-label="Next">&rsaquo;</button>
     </div>
   </div>
 </section>
@@ -347,6 +359,7 @@
 <script src="js/particles.js"></script>
 <script src="js/navigation.js"></script>
 <script src="js/animations.js"></script>
+<script src="js/carousel.js"></script>
 <script src="js/lightbox.js"></script>
 <script src="js/contact.js"></script>
 </body>

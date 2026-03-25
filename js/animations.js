@@ -21,29 +21,7 @@ if (window.hasGSAP) {
       card.addEventListener('mouseleave', function() { gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.6, ease: 'power2.out' }); });
     });
 
-    // horizontal scroll: timeline
-    (function() {
-      var track = document.getElementById('timelineTrack');
-      var section = document.querySelector('.timeline-section');
-      if (track && section) {
-        gsap.to(track, {
-          x: function() { return -(track.scrollWidth - window.innerWidth + 100); }, ease: 'none',
-          scrollTrigger: { trigger: section, start: 'top top', end: function() { return '+=' + track.scrollWidth; }, pin: true, scrub: 1, invalidateOnRefresh: true }
-        });
-      }
-    })();
-
-    // horizontal scroll: gallery
-    (function() {
-      var track = document.getElementById('galleryTrack');
-      var section = document.querySelector('.gallery-section');
-      if (track && section) {
-        gsap.to(track, {
-          x: function() { return -(track.scrollWidth - window.innerWidth + 60); }, ease: 'none',
-          scrollTrigger: { trigger: section, start: 'top top', end: function() { return '+=' + track.scrollWidth; }, pin: true, scrub: 1, invalidateOnRefresh: true }
-        });
-      }
-    })();
+    // carousels are handled in carousel.js
 
     gsap.utils.toArray('.contact-info h3, .contact-info p, .socials').forEach(function(el, i) {
       gsap.from(el, { x: -30, opacity: 0, duration: 0.8, delay: i * 0.1, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 85%' } });
